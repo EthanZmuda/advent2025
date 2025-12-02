@@ -3,18 +3,17 @@ module Main where
 import System.IO.Unsafe (unsafePerformIO)
 
 part1 :: String -> Int
-part1 contents = snd ans where
-  ans = foldl accFunc (50, 0) steps
-  steps = lines contents
-  accFunc acc step =
-    case step of
-      'L':xs -> let total = (fst acc - read xs) `mod` 100 in (total, snd acc + fromEnum (total == 0))
-      'R':xs -> let total = (fst acc + read xs) `mod` 100 in (total, snd acc + fromEnum (total == 0))
+part1 contents = snd (foldl accFunc (50, 0) $ lines contents) where
+
+  accFunc :: (Int, Int) -> String -> (Int, Int)
+  accFunc acc ('L':xs) = combine ((fst acc - read xs) `mod` 100) (snd acc)
+  accFunc acc ('R':xs) = combine ((fst acc + read xs) `mod` 100) (snd acc)
+
+  combine :: Int -> Int -> (Int, Int)
+  combine total inc = (total, inc + fromEnum (total == 0))
 
 part2 :: String -> Int
-part2 contents = snd ans where
-  ans = foldl accFunc (50, 0) steps
-  steps = lines contents
+part2 contents = snd (foldl accFunc (50, 0) $ lines contents) where
 
   accFunc :: (Int, Int) -> String -> (Int, Int)
   accFunc acc step =
@@ -29,7 +28,7 @@ part2 contents = snd ans where
 
 main :: IO ()
 main = do
-  contents <- readFile "src/01/input.txt"
+  contents <- readFile "01/input.txt"
   print $ part1 contents
   print $ part2 contents
 
