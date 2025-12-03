@@ -1,6 +1,4 @@
-module Main where
-
-import System.IO.Unsafe (unsafePerformIO)
+module Day01.Solution where
 
 type TextInput = String
 type Instruction = String
