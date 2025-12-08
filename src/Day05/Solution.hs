@@ -9,7 +9,7 @@ listToTuple :: [a] -> (a, a)
 listToTuple [a, b] = (a, b)
 
 part1 :: String -> Int
-part1 contents =length $ filter isFresh iids where
+part1 contents = length $ filter isFresh iids where
   [rawRanges, rawIids] = splitOn [""] $ lines contents
   iids = map read rawIids
   ranges = map (listToTuple . map read . splitOn "-") rawRanges

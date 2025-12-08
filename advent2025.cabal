@@ -66,6 +66,8 @@ executable advent2025
                       Day03.Solution,
                       Day04.Solution,
                       Day05.Solution,
+                      Day06.Solution,
+                      Day07.Solution,
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
