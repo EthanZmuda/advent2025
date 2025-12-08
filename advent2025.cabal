@@ -28,12 +28,6 @@ version:            0.1.0.0
 -- A longer description of the package.
 -- description:
 
--- The license under which the package is released.
-license:            BSD-3-Clause
-
--- The file containing the license text.
-license-file:       LICENSE
-
 -- The package author(s).
 author:             Ethan Zmuda
 
@@ -43,9 +37,6 @@ maintainer:         ethan.zmuda@gmail.com
 -- A copyright notice.
 -- copyright:
 build-type:         Simple
-
--- Extra doc files to be distributed with the package, such as a CHANGELOG or a README.
-extra-doc-files:    CHANGELOG.md
 
 -- Extra source files to be distributed with the package, such as examples, or a tutorial module.
 -- extra-source-files:
@@ -68,6 +59,24 @@ executable advent2025
                       Day05.Solution,
                       Day06.Solution,
                       Day07.Solution,
+                      Day08.Solution,
+                    --   Day09.Solution,
+                    --   Day10.Solution,
+                    --   Day11.Solution,
+                    --   Day12.Solution,
+                    --   Day13.Solution,
+                    --   Day14.Solution,
+                    --   Day15.Solution,
+                    --   Day16.Solution,
+                    --   Day17.Solution,
+                    --   Day18.Solution,
+                    --   Day19.Solution,
+                    --   Day20.Solution,
+                    --   Day21.Solution,
+                    --   Day22.Solution,
+                    --   Day23.Solution,
+                    --   Day24.Solution,
+                    --   Day25.Solution,
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -80,7 +89,8 @@ executable advent2025
                       comonad,
                       mtl,
                       transformers,
-                      containers
+                      containers,
+                      extra
 
     -- Directories containing source files.
     hs-source-dirs:   src
