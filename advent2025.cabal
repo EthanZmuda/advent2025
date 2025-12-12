@@ -60,7 +60,7 @@ executable advent2025
                       Day06.Solution,
                       Day07.Solution,
                       Day08.Solution,
-                    --   Day09.Solution,
+                      Day09.Solution,
                     --   Day10.Solution,
                     --   Day11.Solution,
                     --   Day12.Solution,
@@ -90,7 +90,8 @@ executable advent2025
                       mtl,
                       transformers,
                       containers,
-                      extra
+                      extra,
+                      deepseq
 
     -- Directories containing source files.
     hs-source-dirs:   src
